@@ -10,17 +10,12 @@ namespace LogView
     /// </summary>
     public partial class MainWindow : Window
     {
-
-        public Color GetColor()
-        {
-            return Color.Blue;
-        }
-
         public MainWindow()
         {
             InitializeComponent();
             logItems.Level = LogLevel.Debug;
             Logger.LogInfo("App", "application started");
+            logItems.GenerateFakeLogMessages(20);
         }
     }
 }
